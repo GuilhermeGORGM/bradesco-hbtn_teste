@@ -18,7 +18,7 @@ public class PersonTest {
 		calendar.set(2000, Calendar.JANUARY, 1);
 		Date birthDate = calendar.getTime();
 
-		person = new Person("Paul", "McCartney", birthDate, true, true, true, 1200f);
+		person = new Person("Paul", "McCartney", birthDate, true, true, true, 1200);
 	}
 
 	@Test
@@ -28,8 +28,8 @@ public class PersonTest {
 
 	@Test
 	public void test_calculateYearlySalary() {
-		person.setSalary(1200f);
-		assertEquals(14400f, person.calculateYearlySalary());
+		person.setSalary(1200);
+		assertEquals(14400, person.calculateYearlySalary());
 	}
 
 	@Test
@@ -37,7 +37,7 @@ public class PersonTest {
 		person.setAnotherCompanyOwner(false);
 		person.setPensioner(false);
 		person.setPublicServer(false);
-		person.setSalary(10000f / 12f);
+		person.setSalary(10000 / 12);
 
 		assertTrue(person.isMEI());
 	}
@@ -47,7 +47,7 @@ public class PersonTest {
 		person.setAnotherCompanyOwner(true);
 		person.setPensioner(false);
 		person.setPublicServer(false);
-		person.setSalary(20000f);
+		person.setSalary(20000);
 
 		assertFalse(person.isMEI());
 	}

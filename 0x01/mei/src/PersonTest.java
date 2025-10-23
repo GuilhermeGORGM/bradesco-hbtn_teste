@@ -34,22 +34,20 @@ public class PersonTest {
 
 	@Test
 	public void person_is_MEI() {
-		// Pessoa apta a ser MEI
 		person.setAnotherCompanyOwner(false);
 		person.setPensioner(false);
 		person.setPublicServer(false);
-		person.setSalary(10000f / 12f); // Renda anual < 130000
+		person.setSalary(10000f / 12f);
 
 		assertTrue(person.isMEI());
 	}
 
 	@Test
 	public void person_is_not_MEI() {
-		// Pessoa não apta (possui outra empresa)
 		person.setAnotherCompanyOwner(true);
 		person.setPensioner(false);
 		person.setPublicServer(false);
-		person.setSalary(20000f); // Renda anual > 130000
+		person.setSalary(20000f);
 
 		assertFalse(person.isMEI());
 	}

@@ -24,7 +24,6 @@ public class Person {
 		this.salary = salary;
 	}
 
-	// Getters e Setters
 	public String getName() {
 		return name;
 	}
@@ -81,17 +80,14 @@ public class Person {
 		this.salary = salary;
 	}
 
-	// Retorna nome completo
 	public String fullName() {
 		return this.name + " " + this.surname;
 	}
 
-	// Calcula salário anual
 	public float calculateYearlySalary() {
 		return this.salary * 12;
 	}
 
-	// Calcula idade com base na data de nascimento
 	private int getAge() {
 		Calendar today = Calendar.getInstance();
 		Calendar birth = Calendar.getInstance();
@@ -104,7 +100,6 @@ public class Person {
 		return age;
 	}
 
-	// Verifica se a pessoa pode ser MEI
 	public boolean isMEI() {
 		boolean incomeOk = calculateYearlySalary() < 130000;
 		boolean ageOk = getAge() >= 18;
